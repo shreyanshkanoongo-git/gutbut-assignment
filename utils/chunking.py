@@ -20,7 +20,7 @@ def chunk_text(text, min_length=100):
         current = []
         for word in words:
             current.append(word)
-            if len(chr(32).join(current)) > 500:
+            if len(" ".join(current)) > 500:
                 raw_chunks.append(" ".join(current))
                 current = []
         if current:
@@ -29,6 +29,8 @@ def chunk_text(text, min_length=100):
     chunks = []
     for chunk in raw_chunks:
         cleaned = " ".join(chunk.split())
+        if cleaned.startswith("/"):
+            cleaned = cleaned[1:].strip()
         if len(cleaned) >= min_length:
             chunks.append(cleaned)
 
