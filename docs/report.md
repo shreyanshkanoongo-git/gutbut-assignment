@@ -61,12 +61,12 @@ The final scores across all 6 sources are:
 
 | Source | Score |
 |---|---|
-| Fairy Gutmother (wellness blog) | 0.2120 |
-| Harvard T.H. Chan (institutional blog) | 0.5985 |
+| Fairy Gutmother (wellness blog) | 0.2144 |
+| Harvard T.H. Chan (institutional blog) | 0.4703 |
 | Huberman Lab (YouTube) | 0.6075 |
 | ZOE Science (science blog) | 0.6500 |
 | Diary of a CEO ft. Dr. B (YouTube) | 0.6725 |
-| MedComm 2024 (PubMed paper) | 0.8025 |
+| MedComm 2024 (PubMed paper) | 0.8130 |
 
 The spread from 0.21 to 0.80 shows the system is working. It correctly identifies the peer-reviewed paper as the most trustworthy source and the wellness influencer blog as the least.
 

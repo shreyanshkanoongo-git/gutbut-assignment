@@ -48,14 +48,14 @@ gutbut-assignment/
 
 | Source | Type | Trust Score |
 |---|---|---|
-| Harvard T.H. Chan School of Public Health | Blog | 0.5985 |
+| Harvard T.H. Chan School of Public Health | Blog | 0.4703 |
 | ZOE Science | Blog | 0.6500 |
-| Fairy Gutmother | Blog | 0.2120 |
+| Fairy Gutmother | Blog | 0.2144 |
 | Huberman Lab ft. Dr. Justin Sonnenburg | YouTube | 0.6075 |
 | Diary of a CEO ft. Dr. Will Bulsiewicz | YouTube | 0.6725 |
-| Gut microbiota in health and disease, MedComm 2024 | PubMed | 0.8025 |
+| Gut microbiota in health and disease, MedComm 2024 | PubMed | 0.8130 |
 
-Harvard scores lower than ZOE because the article was published in 2017. The recency penalty pulls it down. That is correct behaviour. Old Harvard content is still more credible than a new wellness blog, but the system rewards recent information.
+Harvard scores the lowest of the three blogs because the article was published in 2017. Eight years of recency decay pulls it significantly below more recent sources. The system correctly penalises outdated health information regardless of the source's institutional credibility.
 
 ---
 

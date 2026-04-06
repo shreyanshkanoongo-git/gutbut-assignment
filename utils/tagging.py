@@ -35,7 +35,12 @@ def generate_tags(text, max_tags=8):
         for phrase in phrases:
             cleaned = phrase.lower().strip()
             # Only keep short, meaningful phrases — filter junk
-            if cleaned not in seen and 2 <= len(cleaned.split()) <= 4 and len(cleaned) > 5 and cleaned[0].isalpha():
+            if (cleaned not in seen
+                and 2 <= len(cleaned.split()) <= 4
+                and len(cleaned) > 5
+                and cleaned[0].isalpha()
+                and " ." not in cleaned
+                and cleaned[-1].isalpha()):
                 tags.append(cleaned)
                 seen.add(cleaned)
             if len(tags) >= max_tags:
