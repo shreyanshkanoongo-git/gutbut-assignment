@@ -28,6 +28,7 @@ def scrape_blog(url):
     result = {
         "source_url": url,
         "source_type": "blog",
+        "title": "Unknown",
         "author": "Unknown",
         "published_date": "Unknown",
         "language": "en",
@@ -59,6 +60,8 @@ def scrape_blog(url):
         metadata = trafilatura.extract_metadata(html)
 
         if metadata:
+            if metadata.title:
+                result["title"] = metadata.title
             if metadata.author:
                 result["author"] = metadata.author
             if metadata.date:
@@ -78,6 +81,7 @@ def scrape_blog(url):
         # Step 6: Split into chunks
         result["content_chunks"] = chunk_text(extracted)
 
+        print(f"  Title: {result['title']}")
         print(f"  Author: {result['author']}")
         print(f"  Date: {result['published_date']}")
         print(f"  Language: {result['language']}")

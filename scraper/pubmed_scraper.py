@@ -17,6 +17,7 @@ def scrape_pubmed(url):
     result = {
         "source_url": url,
         "source_type": "pubmed",
+        "title": "Unknown",
         "author": "Unknown",
         "published_date": "Unknown",
         "language": "en",
@@ -45,6 +46,9 @@ def scrape_pubmed(url):
 
         record = records[0]
 
+        title = record.get("TI", "Unknown")
+        result["title"] = title
+
         authors = record.get("AU", [])
         if authors:
             if len(authors) <= 3:
@@ -57,7 +61,6 @@ def scrape_pubmed(url):
         journal = record.get("JT", record.get("TA", "Unknown Journal"))
         result["region"] = f"Journal: {journal}"
 
-        title = record.get("TI", "")
         abstract = record.get("AB", "")
         full_text = f"{title}\n\n{abstract}"
 

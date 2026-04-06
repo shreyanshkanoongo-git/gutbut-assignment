@@ -56,6 +56,7 @@ def scrape_youtube(url):
     result = {
         "source_url": url,
         "source_type": "youtube",
+        "title": "Unknown",
         "author": "Unknown",
         "published_date": "Unknown",
         "language": "en",
@@ -73,6 +74,7 @@ def scrape_youtube(url):
     metadata = get_metadata(video_id)
 
     if metadata:
+        result["title"] = metadata.get("title", "Unknown")
         result["author"] = metadata.get("uploader", metadata.get("channel", "Unknown"))
         upload_date = metadata.get("upload_date", "")
         if upload_date and len(upload_date) == 8:
@@ -90,7 +92,6 @@ def scrape_youtube(url):
     content = transcript if transcript else description
 
     if content:
-        # Clean transcript artifacts
         import re
         content = re.sub(r"\[.*?\]", "", content)
         content = re.sub(r"  +", " ", content).strip()
@@ -105,6 +106,7 @@ def scrape_youtube(url):
     else:
         print("  Warning: No content available.")
 
+    print(f"  Title: {result['title']}")
     print(f"  Channel: {result['author']}")
     print(f"  Date: {result['published_date']}")
     print(f"  Language: {result['language']}")
