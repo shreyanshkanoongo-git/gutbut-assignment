@@ -159,6 +159,8 @@ Output files will be saved to the output/ folder. Runtime is approximately 2-3 m
 
 The RAKE algorithm occasionally pulls in navigation fragments as tags on pages with complex layouts. For example, Harvard's page produced a tag starting with "g .," which is a leftover from a navigation element. This is a known limitation of keyword extraction on web-scraped content.
 
+For blog articles with a reference section, trafilatura sometimes includes bibliography entries in the extracted content. The ZOE article is an example — its content_chunks include citation URLs from the reference list at the bottom of the page. This is a known limitation of keyword-based content extraction on pages that do not use a clear structural boundary between article body and references.
+
 YouTube transcripts are auto-generated captions in some cases, which means occasional transcription errors in the content chunks. YouTube transcripts are also delivered line-by-line rather than in paragraphs, so chunks can be shorter than those from blog posts. A production version would apply sentence-boundary detection to merge transcript lines into proper paragraph-sized segments.
 
 The domain authority scores are pre-defined, not dynamically fetched. A production version of this system would pull real domain authority data from an API like Moz or Ahrefs.
