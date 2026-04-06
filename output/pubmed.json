@@ -10,14 +10,14 @@
     "topic_tags": [
       "review consolidates recent findings",
       "diseases remain insufficiently understood",
+      "g ., obesity",
+      "g ., alzheimer",
       "also identifies gaps",
       "modulating immune responses",
       "dysregulated immune responses",
-      "maintaining human health",
-      "cell death pathways",
-      "including immune regulation"
+      "maintaining human health"
     ],
-    "trust_score": 0.8025,
+    "trust_score": 0.813,
     "content_chunks": [
       "The gut microbiota plays a critical role in maintaining human health, influencing a wide range of physiological processes, including immune regulation, metabolism, and neurological function. Recent studies have shown that imbalances in gut microbiota composition can contribute to the onset and progression of various diseases, such as metabolic disorders (e.g., obesity and diabetes) and neurodegenerative conditions (e.g., Alzheimer's and Parkinson's). These conditions are often accompanied by chronic",
       "inflammation and dysregulated immune responses, which are closely linked to specific forms of cell death, including pyroptosis and ferroptosis. Pathogenic bacteria in the gut can trigger these cell death pathways through toxin release, while probiotics have been found to mitigate these effects by modulating immune responses. Despite these insights, the precise mechanisms through which the gut microbiota influences these diseases remain insufficiently understood. This review consolidates recent findings",
