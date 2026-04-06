@@ -19,7 +19,7 @@ The trust score intentionally spans a wide range, from 0.21 to 0.80, to show the
 
 ## Folder structure
 
-\`\`\`
+```
 gutbut-assignment/
 ├── scraper/
 │   ├── __init__.py
@@ -43,7 +43,7 @@ gutbut-assignment/
 ├── main.py
 ├── requirements.txt
 └── README.md
-\`\`\`
+```
 
 ---
 
