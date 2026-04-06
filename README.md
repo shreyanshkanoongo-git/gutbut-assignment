@@ -136,7 +136,7 @@ A multiplier that reduces the final score for sources that contain SEO spam lang
 
 ## How to run
 ```bash
-git clone https://github.com/shreyanshkanoongo/gutbut-assignment
+git clone https://github.com/shreyanshkanoongo-git/gutbut-assignment
 cd gutbut-assignment
 python3 -m venv venv
 source venv/bin/activate
