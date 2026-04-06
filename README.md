@@ -78,6 +78,10 @@ Harvard scores lower than ZOE because the article was published in 2017. The rec
 
 ## How scraping works
 
+**A note on the region field**
+
+The assignment defines region as "geographic region if available." In practice, most online health content does not explicitly state a geographic origin. Where a site name, channel name, or journal name is available, that is used as the closest meaningful identifier. This is acknowledged in Known Limitations.
+
 **Blogs**
 
 trafilatura fetches the page and strips out everything that is not article content. Navigation, ads, footers, cookie banners are all removed. The remaining text is split into chunks. If the page does not use standard paragraph breaks, the chunker falls back to single newlines, then to splitting by word count.
@@ -155,7 +159,7 @@ Output files will be saved to the output/ folder. Runtime is approximately 2-3 m
 
 The RAKE algorithm occasionally pulls in navigation fragments as tags on pages with complex layouts. For example, Harvard's page produced a tag starting with "g .," which is a leftover from a navigation element. This is a known limitation of keyword extraction on web-scraped content.
 
-YouTube transcripts are auto-generated captions in some cases, which means occasional transcription errors in the content chunks.
+YouTube transcripts are auto-generated captions in some cases, which means occasional transcription errors in the content chunks. YouTube transcripts are also delivered line-by-line rather than in paragraphs, so chunks can be shorter than those from blog posts. A production version would apply sentence-boundary detection to merge transcript lines into proper paragraph-sized segments.
 
 The domain authority scores are pre-defined, not dynamically fetched. A production version of this system would pull real domain authority data from an API like Moz or Ahrefs.
 

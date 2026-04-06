@@ -5,7 +5,6 @@
 import requests
 import trafilatura
 from langdetect import detect
-from datetime import datetime
 from utils.chunking import chunk_text
 from utils.tagging import generate_tags
 

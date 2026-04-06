@@ -71,7 +71,7 @@ def score_recency(published_date):
         if age_years < 1:
             return 1.0
         elif age_years < 2:
-            return 0.90
+            return 0.92
         elif age_years < 3:
             return 0.80
         elif age_years < 5:
@@ -140,7 +140,7 @@ def score_author_credibility(author, source_type, url):
     # For blogs, check domain first — institutional sources get high score
     if source_type == "blog":
         if "harvard.edu" in url or "nih.gov" in url or "cdc.gov" in url:
-            return 0.90
+            return 0.92
         if any(title in author_lower for title in ["md", "phd", "dr.", "rdn", "rd"]):
             return 0.80
         if author_lower in ["admin", "editor", "staff"]:
@@ -239,11 +239,7 @@ def calculate_trust_score(source):
     content_chunks = source.get("content_chunks", [])
 
     # Calculate each component
-    # Override author score for known institutional domains
-    if "harvard.edu" in url or "nih.gov" in url or "cdc.gov" in url:
-        author_score = 0.92
-    else:
-        author_score = score_author_credibility(author, source_type, url)
+    author_score = score_author_credibility(author, source_type, url)
     citation_score = score_citation_count(source_type, content_chunks)
     domain_score = score_domain_authority(url)
     recency_score = score_recency(published_date)

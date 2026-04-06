@@ -78,7 +78,7 @@ The spread from 0.21 to 0.80 shows the system is working. It correctly identifie
 
 **Missing date:** If no publication date is found, the recency score defaults to 0.30, which is a moderate penalty. The system does not assume content is recent just because no date is present.
 
-**No transcript:** The Diary of a CEO video initially failed transcript retrieval due to a wrong video ID. After verifying the correct ID, the transcript loaded successfully. The system is designed to fall back to the video description if a transcript cannot be retrieved, so it never returns empty content.
+**No transcript:** The system is designed to fall back to the video description if a transcript cannot be retrieved, so content is never empty. Transcripts are prioritised over descriptions because they contain substantially more spoken content, but the fallback ensures the scraper does not fail silently on videos with disabled captions.
 
 **Multiple authors:** PubMed articles often have many authors. The system formats this as "First Author et al." and uses the combined author score rather than the score of any single author.
 
