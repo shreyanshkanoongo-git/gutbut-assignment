@@ -93,7 +93,6 @@ def scrape_youtube(url):
     content = transcript if transcript else description
 
     if content:
-        import re
         content = re.sub(r"\[.*?\]", "", content)
         content = re.sub(r"  +", " ", content).strip()
 
