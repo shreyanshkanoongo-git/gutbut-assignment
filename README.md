@@ -20,12 +20,15 @@ The trust score intentionally spans a wide range, from 0.21 to 0.80, to show the
 ## Folder structure
 gutbut-assignment/
 ├── scraper/
+│   ├── __init__.py
 │   ├── blog_scraper.py
 │   ├── youtube_scraper.py
 │   └── pubmed_scraper.py
 ├── scoring/
+│   ├── __init__.py
 │   └── trust_score.py
 ├── utils/
+│   ├── __init__.py
 │   ├── tagging.py
 │   └── chunking.py
 ├── output/
@@ -144,7 +147,7 @@ pip install -r requirements.txt
 python3 main.py
 ```
 
-Output files will be saved to the output/ folder.
+Output files will be saved to the output/ folder. Runtime is approximately 2-3 minutes. Requires Python 3.9 or higher.
 
 ---
 
