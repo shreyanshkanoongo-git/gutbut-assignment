@@ -7,6 +7,7 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from utils.chunking import chunk_text
 from utils.tagging import generate_tags
 from langdetect import detect
+import re
 
 def extract_video_id(url):
     """Extracts YouTube video ID from URL."""
